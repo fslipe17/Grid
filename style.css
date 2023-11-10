@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.container{
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.header{
+    width: 100%;
+    min-height: 40px;
+    background-color: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 8px 15px;
+}
+
+.logonavbar{
+    width: 250px;
+}
+
+.buttoms{
+    display: flex;
+    gap: 15px;
+}
+
+.navbtn{
+    padding: 6px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.navbtn:hover{
+    border-bottom: 2px solid black;
+}
+
+.sectionTitle{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sectiondescriçao{
+    text-align: center;
+    color: #383838;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "mainContent slideBarContent";
+    padding: 20px;
+    flex: 1 0 auto;
+}
+
+.mainContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    grid-area: "mainContent";
+}
+
+.categoryCard{
+    width: 300px;
+    height: 450px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: 0.5;
+    cursor: pointer;
+}
+
+.categoryCard:hover{
+    border-color: black;
+}
+.mainCardImg{
+    width: 100%;
+    height: 200px;
+    border-radius: 27px;
+}
+
+/*.mainCategoryCardTitle{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}*/
+
+.mainCategoryCardDescription{
+    padding: 10px;
+}
+
+.slideBarContent{
+    background-color: #383838;
+    color: white;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: "slideBarContent";
+    gap: 15px;
+}
+
+.slideBarCard{
+    width: 75%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.slideBarCardImg{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slideBarTitle{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 12px;
+}
+
+.slideBarCard:hover{
+    border-color: gainsboro;
+}
+
+#footer{
+    width: 100%;
+    min-height: 50px;
+    background-color: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 22px;
+    gap: 15px;
+}
+
+.logoFooter{
+    width: 205px;
+}
+@media(max-width:630px){
+.gridContainer{
+    grid-template-areas: "mainContent""slideBarContent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+.slideBarContent{
+    min-width: auto;
+}
+
+}
+@media(max-width:560px){
+.header{
+    justify-content: center;
+}
+.footer{
+    justify-content: center;
+}
+}
